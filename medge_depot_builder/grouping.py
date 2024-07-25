@@ -33,11 +33,6 @@ class GroupObjects(Operator):
                 scale_constraint = obj.constraints.new(type='COPY_SCALE')
                 scale_constraint.target = empty
 
-        # Set the selection to the new empty object
-        bpy.ops.object.select_all(action='DESELECT')
-        empty.select_set(True)
-        context.view_layer.objects.active = empty
-
         self.report({'INFO'}, f"Grouped {len(selected_objects)} objects with {empty.name}")
         return {'FINISHED'}
 

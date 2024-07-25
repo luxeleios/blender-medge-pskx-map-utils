@@ -1,7 +1,7 @@
 import bpy
 from bpy.props import StringProperty, BoolProperty
 
-DEFAULT_DEPOT_PATH = r"D:\gamedev\ME1Depot"
+DEFAULT_DEPOT_PATH = r"D:\gamedev\medge_raw_depot"
 
 class MassImportProperties(bpy.types.PropertyGroup):
     folder_path: StringProperty(
