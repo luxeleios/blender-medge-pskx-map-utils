@@ -35,3 +35,8 @@ The addon UI is located inside the `Tool` category.
 ![UModel](https://github.com/luxeleios/blender-medge-pskx-map-utils/blob/main/umodel_settings.png)
 - The folder UModel extracted the assets to will also have to be set in the `Depot Path` field. It is necessary to have both `Depot Path` and `Folder Path` set, they can have the same path.
 - You can import materials on their own, without importing the meshes. Most imported materials will have a basecolor, roughness and OGL normal map already set.
+
+## Credits
+- Myself for designing, debugging, testing and occasional rewriting
+- ChatGPT for doing most of the dirty work
+- A friend of mine for additional help with python troubleshooting and rewriting
