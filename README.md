@@ -2,7 +2,7 @@
 This is a blender addon made to conveniently mass import *.pskx and *.mat assets extracted by umodel from Mirror's Edge (2008), aided by multiple utility functions. Blender version 3.6. Intended as a supplement to [MEdge Map Editor](https://github.com/medge-tools/medge-map-editor/tree/main)
 
 ## Prerequisites
-1. Install this [PSK import script from Befzz](https://github.com/Befzz/blender3d_import_psk_psa/releases) for Blender
+1. Install [PSK import script from Befzz](https://github.com/Befzz/blender3d_import_psk_psa/releases) for Blender
 2. Install [MEdge Map Editor](https://github.com/medge-tools/medge-map-editor/tree/main) for Blender
 3. Install [UModel](https://www.gildor.org/en/projects/umodel) to be able to extract assets (mesh, textures, primitive materials) found in UE3 *.upk packages and processed by this addon
 
