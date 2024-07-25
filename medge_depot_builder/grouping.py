@@ -33,6 +33,11 @@ class GroupObjects(Operator):
                 scale_constraint = obj.constraints.new(type='COPY_SCALE')
                 scale_constraint.target = empty
 
+        # Set the selection to the new empty object
+        bpy.ops.object.select_all(action='DESELECT')
+        empty.select_set(True)
+        context.view_layer.objects.active = empty
+
         self.report({'INFO'}, f"Grouped {len(selected_objects)} objects with {empty.name}")
         return {'FINISHED'}
 
@@ -102,7 +107,19 @@ def redirect_selection_handler(scene):
                 bpy.context.view_layer.objects.active = constraint.target
                 bpy.ops.object.select_all(action='DESELECT')
                 constraint.target.select_set(True)
+                constrained_objects = get_constrained_objects(constraint.target)
+                for obj in constrained_objects:
+                    obj.select_set(True)
                 return
+
+def get_constrained_objects(empty):
+    constrained_objects = []
+    for obj in bpy.data.objects:
+        for constraint in obj.constraints:
+            if constraint.target == empty:
+                constrained_objects.append(obj)
+                break
+    return constrained_objects
 
 def register():
     register_class(GroupObjects)
