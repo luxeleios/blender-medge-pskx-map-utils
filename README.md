@@ -40,3 +40,7 @@ The addon UI is located inside the `Tool` category.
 - Myself for designing, debugging, testing and occasional rewriting
 - ChatGPT for doing most of the dirty work
 - A friend of mine for additional help with python troubleshooting and rewriting
+
+## TODO
+- Remove unused mesh_organiser.py
+- Clean up unused code
