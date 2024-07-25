@@ -1,5 +1,5 @@
 # MEDGE Depot Builder - Mass Import PSKX Files + Utils
-This is a blender addon made to conveniently mass import *.pskx and *.mat assets extracted by umodel from Mirror's Edge (2008), aided by multiple utility functions. Intended as a supplement to [MEdge Map Editor](https://github.com/medge-tools/medge-map-editor/tree/main). Tested on Blender 3.6. 
+This is a Blender addon made to conveniently mass import *.pskx and *.mat assets extracted by umodel from Mirror's Edge (2008), aided by multiple utility functions. Intended as a supplement to [MEdge Map Editor](https://github.com/medge-tools/medge-map-editor/tree/main). Tested on Blender 3.6. 
 
 ## Prerequisites
 1. Install [PSK import script from Befzz](https://github.com/Befzz/blender3d_import_psk_psa/releases) for Blender
