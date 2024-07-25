@@ -24,7 +24,7 @@ The addon UI is located inside the `Tool` category.
 - `Skip LOD Files` - Skips *.pskx files that contain LOD in their filenames during import. Default is set to True.
 - `Material Folder Path` - Path to the folder from which the materials exported by UModel as *.mat files will be imported. Can be used without setting the `Folder Path`
 - `Duplicates to Prefabs` - Identifies duplicates of objects located either inside the GenericBrowser collection or anywhere in the scene by their name and converts them into StaticMeshActors for export via medge-map-editor.
-- `Process All Collections` - Defines whether the `Duplicates to Prefabs` will look for duplicates everywhere in the scene or only inside the Level collection. Default is set to True.
+- `Process All Collections` - Defines whether `Duplicates to Prefabs` will look for duplicates everywhere in the scene or only inside the Level collection. Default is set to True.
 - `Move Duplicates to Level` - If `Process All Collections` is checked, duplicate objects will be moved inside the `Level` collection during conversion.
 - `Group` - Create a non-destructive group from selected objects. While grouped, they are transformed as one.
 - `Ungroup` - Ungroup selected objects. Once ungrouped, they maintain their transformations.
