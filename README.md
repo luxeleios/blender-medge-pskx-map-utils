@@ -16,7 +16,7 @@ This is a Blender addon made to conveniently mass import *.pskx and *.mat assets
 ## UI Overview and Addon Usage
 The addon UI is located inside the `Tool` category.
 
-![UI](https://github.com/luxeleios/blender-medge-pskx-map-utils/blob/main/addon_ui_sample.png)
+![UI](https://github.com/luxeleios/blender-medge-pskx-map-utils/blob/main/addon_ui_samplev2.png)
 
 ### UI Overview
 - `Folder Path` - Path to the folder containing *.pskx files to import. Folders found within will be recreated as Blender Collections.
