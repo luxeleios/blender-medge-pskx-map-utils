@@ -20,6 +20,8 @@ class GroupObjects(Operator):
         empty = bpy.data.objects.new(empty_name, None)
         context.collection.objects.link(empty)
         empty.location = active_object.location
+        empty.rotation_euler = active_object.rotation_euler
+        empty.scale = active_object.scale
 
         # Add constraints to selected objects
         for obj in selected_objects:
@@ -37,6 +39,9 @@ class GroupObjects(Operator):
         bpy.ops.object.select_all(action='DESELECT')
         empty.select_set(True)
         context.view_layer.objects.active = empty
+
+        # Re-attach the handler
+        ensure_handler()
 
         self.report({'INFO'}, f"Grouped {len(selected_objects)} objects with {empty.name}")
         return {'FINISHED'}
@@ -70,6 +75,9 @@ class UngroupObjects(Operator):
 
         for empty in empties_to_remove:
             bpy.data.objects.remove(empty)
+
+        # Re-attach the handler
+        ensure_handler()
 
         self.report({'INFO'}, "Ungrouped selected objects")
         return {'FINISHED'}
@@ -121,15 +129,20 @@ def get_constrained_objects(empty):
                 break
     return constrained_objects
 
+def ensure_handler():
+    if redirect_selection_handler not in bpy.app.handlers.depsgraph_update_post:
+        bpy.app.handlers.depsgraph_update_post.append(redirect_selection_handler)
+
 def register():
     register_class(GroupObjects)
     register_class(UngroupObjects)
-    bpy.app.handlers.depsgraph_update_post.append(redirect_selection_handler)
+    ensure_handler()
 
 def unregister():
     unregister_class(GroupObjects)
     unregister_class(UngroupObjects)
-    bpy.app.handlers.depsgraph_update_post.remove(redirect_selection_handler)
+    if redirect_selection_handler in bpy.app.handlers.depsgraph_update_post:
+        bpy.app.handlers.depsgraph_update_post.remove(redirect_selection_handler)
 
 if __name__ == "__main__":
     register()
