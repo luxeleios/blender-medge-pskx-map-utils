@@ -26,8 +26,8 @@ The addon UI is located inside the `Tool` category.
 - `Duplicates to Prefabs` - Identifies duplicates of objects located either inside the GenericBrowser collection or anywhere in the scene by their name and converts them into StaticMeshActors for export via medge-map-editor.
 - `Process All Collections` - Defines whether `Duplicates to Prefabs` will look for duplicates everywhere in the scene or only inside the Level collection. Default is set to True.
 - `Move Duplicates to Level` - If `Process All Collections` is checked, duplicate objects will be moved inside the `Level` collection during conversion.
-- `Group` - Create a non-destructive group from selected objects. While grouped, they are transformed as one.
-- `Ungroup` - Ungroup selected objects. Once ungrouped, they maintain their transformations.
+- ~~`Group` - Create a non-destructive group from selected objects. While grouped, they are transformed as one.~~
+- ~~`Ungroup` - Ungroup selected objects. Once ungrouped, they maintain their transformations.~~
 
 ### Usage
 - Use UModel to extract StaticMesh, material and texture assets to a folder, make sure you use the following settings, especially the ones highlighted in red:
