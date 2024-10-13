@@ -11,7 +11,7 @@ This is a Blender addon made to conveniently mass import *.pskx and *.mat assets
 - __Mass import *.mat files created by UModel as blender materials__ - *.mat files are primitve reconstructions of the materials found inside the unreal *.upk packages. They are created by UModel to be used with 3ds Max material system. They usually contain references to Diffuse, Specular and Normal map textures, nothing complex.
 - __Reconstruct *.upk folder/group structure as Blender collections and place imported meshes inside__
 - __Automatically convert duplicate objects found in the scene into StaticMeshActors used by MEdge Map Editor addon__
-- __Automatically convert multiple selected objects into a non-destructive group__ - Groups behave like a singular object when transformed. When ungrouped, they maintain their group transforms.
+- ~~__Automatically convert multiple selected objects into a non-destructive group__ - Groups behave like a singular object when transformed. When ungrouped, they maintain their group transforms.~~ This functionality needs a rework, therefore it is disabled for now.
 
 ## UI Overview and Addon Usage
 The addon UI is located inside the `Tool` category.
